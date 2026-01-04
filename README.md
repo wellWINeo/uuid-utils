@@ -2,9 +2,11 @@
 
 ## Overview
 
-I'm tired of following:
-- using webapp/REPL to generate UUID
-- manually formatting UUID via `echo '<UUID>' | tr -d '-' | tr '[:lower:]' '[:upper:]'`
+A command-line tool to simplify common UUID operations:
+- Generate UUIDs without external tools or web interfaces
+- Format UUIDs (convert case, add/remove hyphens)
+- Identify UUID versions
+- Work with UUIDs across different formats (including System.Guid)
 
 ## Usage
 
