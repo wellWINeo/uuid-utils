@@ -15,4 +15,4 @@ Each generator (e.g. v4, v5 or v6) has its own generator for expandability.
 
 ## Subcommands
 
-Each subcommand (`gen`, `fmt`, `info`, etc.) places its own implementation in `./src/subcommands/`.
+Each subcommand (`gen`, `fmt`, `info`, `nil`, etc.) places its own implementation in `./src/subcommands/`.

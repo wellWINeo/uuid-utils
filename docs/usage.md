@@ -43,6 +43,24 @@ version: 4
 ... # other info specific to version like timestamp, node ID or name 
 ```
 
+## Nil UUID
+
+Returns the nil UUID (all zeros):
+
+```shell
+$ uuid nil
+00000000-0000-0000-0000-000000000000
+
+$ uuid nil --compact
+00000000000000000000000000000000
+
+$ uuid nil --hex
+0x00000000000000000000000000000000
+
+$ uuid nil --uppercase
+00000000-0000-0000-0000-000000000000
+```
+
 ## Normalize UUID
 
 Normalizes UUID with mixed byteorder (like .NET`s System.Guid)

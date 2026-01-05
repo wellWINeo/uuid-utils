@@ -8,6 +8,7 @@ This document provides guidance for AI agents (including Claude Code) working on
 - Generate UUIDs (v4, v7)
 - Format UUIDs in various representations (canonical, compact, hex, uppercase)
 - Display detailed information about UUIDs
+- Return the nil UUID (all zeros)
 - Normalize .NET System.Guid byte order to RFC4122 format
 
 ### Tech Stack
@@ -28,6 +29,7 @@ uuid-utils/
 │       ├── generate.rs      # `gen` subcommand implementation
 │       ├── fmt.rs           # `fmt` subcommand implementation
 │       ├── info.rs          # `info` subcommand implementation
+│       ├── nil.rs           # `nil` subcommand implementation
 │       └── normalize.rs     # `normalize` subcommand implementation
 ├── docs/
 │   ├── usage.md             # User-facing usage examples
@@ -149,6 +151,7 @@ uuid-utils/
 cargo run -- gen v4
 cargo run -- fmt 550e8400-e29b-41d4-a716-446655440000 --compact
 cargo run -- info 550e8400-e29b-41d4-a716-446655440000
+cargo run -- nil --compact
 cargo run -- normalize D004A78FD44C1B4E8213324AE10814DC
 ```
 

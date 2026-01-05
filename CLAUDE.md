@@ -19,6 +19,7 @@ For detailed instructions on working with this codebase, including project struc
 - `gen` - Generate new UUIDs (v4, v7)
 - `fmt` - Format existing UUIDs
 - `info` - Display UUID information
+- `nil` - Return the nil UUID (all zeros)
 - `normalize` - Convert .NET System.Guid to RFC4122 format
 
 ## Documentation

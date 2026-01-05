@@ -60,6 +60,21 @@ enum Commands {
         uuid: String,
     },
 
+    /// Return the nil UUID (00000000-0000-0000-0000-000000000000)
+    Nil {
+        /// Output in uppercase
+        #[arg(long)]
+        uppercase: bool,
+
+        /// Output in compact format (no hyphens)
+        #[arg(long)]
+        compact: bool,
+
+        /// Output with 0x hex prefix
+        #[arg(long)]
+        hex: bool,
+    },
+
     /// Normalize a .NET System.Guid to RFC4122 format
     Normalize {
         /// UUID in .NET System.Guid byte order
@@ -100,6 +115,17 @@ fn main() {
         }
         Commands::Info { uuid } => {
             subcommands::info::run(subcommands::info::InfoArgs { uuid });
+        }
+        Commands::Nil {
+            uppercase,
+            compact,
+            hex,
+        } => {
+            subcommands::nil::run(subcommands::nil::NilArgs {
+                uppercase,
+                compact,
+                hex,
+            });
         }
         Commands::Normalize { uuid } => {
             subcommands::normalize::run(subcommands::normalize::NormalizeArgs { uuid });
